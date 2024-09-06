@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    
+    <RelativeLayout
+        android:id="@+id/internetLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="You're not connected to the Internet"
+        android:layout_centerInParent="true" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/noInternetLayout"
+        >
+        <ImageView
+            android:id="@+id/no_internet_image"
+            android:layout_width="wrap_content"
+            android:layout_height="300dp"
+            android:src="@drawable/no_internet"
+            android:layout_marginTop="128dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/no_internet_heading"
+            android:layout_below="@id/no_internet_image"
+            android:text="No Internet Connection"
+            android:layout_centerHorizontal="true"
+            android:textAllCaps="true"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/no_internet_text"
+            android:layout_below="@+id/no_internet_heading"
+            android:layout_centerHorizontal="true"
+            android:text="Check your Internet Connection and Try Again"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:layout_marginHorizontal="32dp"
+            android:layout_marginVertical="64dp"
+            android:gravity="center"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/try_again_button"
+            android:layout_below="@+id/no_internet_text"
+            android:layout_centerHorizontal="true"
+            android:backgroundTint="@color/black"
+            android:text="Try Again"
+            android:paddingHorizontal="32dp"
+            android:textAllCaps="false"
+            app:cornerRadius="16dp"/>
+
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>
